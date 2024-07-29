@@ -232,33 +232,3 @@ type bash
 type psql
 type ./five.sh
 exit
-git remote -v
-git remote add origin https://github.com/hungpppiii/Building-Five-Programs---Bash-Script.git
-git init
-cd ..
-ls
-cd W
-cd Workspace
-ls
-cd workspace/
-ls
-cd project/
-git remote -v
-git remote set-url origin https://github.com/hungpppiii/Building-Five-Programs---Bash-Script.git
-git branch -M main
-git push -u origin main
-git push -u origin main
-git push -u origin main
-git branch
-git log
-git push origin main
-git gc --prune=now
-git repack -a -d --window=10 --depth=10
-git repack -a -d --window=10 --depth=10
-git push origin main
-git push -u origin main
-ls -la
-rm -rf .git
-git init
-git remote add origin https://github.com/hungpppiii/Building-Five-Programs---Bash-Script.git
-git branch -M main
