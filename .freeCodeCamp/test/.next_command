@@ -106,3 +106,4 @@ cp courses.csv courses_test.csv
 clear
 clear
 ./insert_data.sh
+./insert_data.sh
