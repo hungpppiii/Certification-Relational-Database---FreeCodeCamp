@@ -95,3 +95,4 @@ declare -p IFS
 cler
 clear
 help test
+cp courses.csv courses_test.csv
