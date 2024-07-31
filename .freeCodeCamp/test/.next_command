@@ -92,3 +92,6 @@ declare -p IFS
 ./insert_data.sh
 ./insert_data.sh
 ./insert_data.sh
+cler
+clear
+help test
