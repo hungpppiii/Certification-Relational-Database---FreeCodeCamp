@@ -97,3 +97,4 @@ clear
 help test
 cp courses.csv courses_test.csv
 ./insert_data.sh
+./insert_data.sh
