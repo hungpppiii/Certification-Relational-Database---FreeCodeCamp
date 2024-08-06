@@ -1,15 +1,14 @@
 #!/bin/bash
 PSQL="psql --username=postgres --dbname=periodic_table -t --no-align -c"
 
-echo Please provide an element as an argument.
-read INPUT
+echo "Please provide an element as an argument."
+INPUT=$1
 
-ELEMENT=$($PSQL "SELECT * FROM elements WHERE atomic_number = '$INPUT' OR symbol = '$INPUT' OR name = '$INPUT'")
+IFS="|" read ATOMIC_NUMBER SYMBOL ELEMENT_NAME <<< $($PSQL "SELECT * FROM elements WHERE atomic_number = '$INPUT' OR symbol = '$INPUT' OR name = '$INPUT'")
 
-if [[ -n $ELEMENT ]]
+if [[ -n $ATOMIC_NUMBER ]]
 then
+  echo "The element with atomic number $ATOMIC_NUMBER is $ELEMENT_NAME ($SYMBOL). It's a nonmetal, with a mass of 1.008 amu. Hydrogen has a melting point of -259.1 celsius and a boiling point of -252.9 celsius."
 else
-  echo 
+  echo "I could not find that element in the database."
 fi
-
-The element with atomic number 1 is Hydrogen (H). It's a nonmetal, with a mass of 1.008 amu. Hydrogen has a melting point of -259.1 celsius and a boiling point of -252.9 celsius.
